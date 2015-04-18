@@ -273,6 +273,10 @@ LED mit dem längsten Pin auf die rote +-Linie. Die anderen Pins einfach so ins 
 
 Dann kann man die LED über den Webserver steuern.
 
+Das ganze läuft dann natürlich auch autark.
+
+<img src="600_436424180.jpeg" width="100%">
+
 ## OpenWeather
 
 Für OpenWeather braucht man eine Library:
