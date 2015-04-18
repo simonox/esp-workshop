@@ -9,7 +9,7 @@ Das ganze findet man auch auf Meetup (dort kommen die Fotos her): http://www.mee
 Das Etherpad dazu ist hier: https://pad.attraktor.org/p/ESP8266
 
 
-## Vorbereitung
+## Vorbereitung (Mail von Markus)
 
 Wenn Du mit der neuen ESP8266/ Arduino-IDE programmieren möchtest (daraus kann man das ESP8266-Modul über die Arduino IDE direkt programmieren), wäre es sinnvoll, wenn Du Dir (am besten kurz vor dem Workshop) eine aktuelle Version vom github herunterlädst: 
 
@@ -37,6 +37,7 @@ Hier die Bilder:
 
 
 ## ESP-Bausatz
+
 <img src="highres_436418083.jpeg" width="90%">
 
 
@@ -46,7 +47,7 @@ Hier die Bilder:
 
 ### ESP-07
 
-Im ESP-Bausatz war ein ESP-07 auf einem Steckbrett.
+Im ESP-Bausatz ist ein ESP-07 auf einem Steckbrett.
 
 <img src="https://wiki.attraktor.org/images/b/ba/Board_ESP8266.jpg" width="90%">
 
@@ -54,12 +55,12 @@ Im ESP-Bausatz war ein ESP-07 auf einem Steckbrett.
 
 Installiere Treiber von hier:  http://www.wch.cn/downloads.php?name=pro&proid=5
 
-Install  CH340 driver
-Run the command in Terminal: 
+Installiere den CH340-Treiber
+Führe das Kommando im Terminal aus: 
 
 	sudo nvram boot-args="kext-dev-mode=1"
 
-Reboot
+Starte den Rechner neu.
 
 Dann sollte es ein neues Gerät geben:
 
@@ -69,6 +70,7 @@ Dann sollte es ein neues Gerät geben:
 Anmerkung: Dann läuft auch ein PL2303 USB UART Adapter TTL-Pegel 3.3V / 5V mit dem Raspberry Pi.
 
 ## ESPlorer
+
 Das Modul schließt man über Micro-USB an.
 
 <img src="600_436421150.jpeg" width="90%" >
@@ -227,6 +229,7 @@ Man kann die Mac-Adresse holen:
 	OK
 
 ## NodeMCU
+
 ### Vorbereitung
 
 Für NodeMCU wird eine neue Firmware benötigt. Diese Firmware kommuniziert mit dem Controller. Dazu wird die neue Firmware "NodeMCU firmware" aufgespielt:
@@ -267,7 +270,7 @@ Auf die kann man sich mit einem Webbrowser connecten: http://192.168.0.78/
 <img src="highres_436423567.jpeg" width="100%">
 
 ### LED
-LED mit dem längsten Pin auf die rote +-Linie. Die anderen Pins einfach so ins Steckbrett. Dann verbinden wie auf dem Foto zu sehen.
+LED mit dem längsten Pin auf die rote +-Linie. Die anderen Pins (stehen für Red, Green, Blue) einfach so ins Steckbrett. Dann verbinden wie auf dem Foto zu sehen.
 
 <img src="600_436423930.jpeg" width="100%">
 
