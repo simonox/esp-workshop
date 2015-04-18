@@ -55,7 +55,8 @@ Im ESP-Bausatz ist ein ESP-07 auf einem Steckbrett.
 
 Installiere Treiber von hier:  http://www.wch.cn/downloads.php?name=pro&proid=5
 
-Installiere den CH340-Treiber
+Installiere den CH340-Treiber.
+
 Führe das Kommando im Terminal aus: 
 
 	sudo nvram boot-args="kext-dev-mode=1"
