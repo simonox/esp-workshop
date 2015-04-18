@@ -253,9 +253,27 @@ Man kann sich dann wieder über ESPlorer verbinden. Es gibt eine neue Firmware.
 Jetzt kann man nicht nur über AT-Befehle mit dem ESP sprechen.
 
 	=wifi.sta.getip()
-	192.168.0.78	255.255.254.0	192.168.0.1<img src="600_436423045.jpeg" width="100%">### LuraJetzt kann man mit LUA programmieren. Es gibt zwei Beispiele:
+	192.168.0.78	255.255.254.0	192.168.0.1<img src="600_436423045.jpeg" width="100%">### LuaJetzt kann man mit LUA programmieren. Es gibt zwei Beispiele:
 * init.lua		
-* webap\_toggle\_pin.lua## OpenWeather
+* webap\_toggle\_pin.lua**Da in diesen Scripts Passworte stehen, liegt es nicht in diesem Repo!**
+
+Die eigene IP-Adresse ermitteln:
+
+	=wifi.sta.getip()
+	192.168.0.78	255.255.254.0	192.168.0.1
+
+Auf die kann man sich mit einem Webbrowser connecten: http://192.168.0.78/
+
+<img src="highres_436423567.jpeg" width="100%">
+
+### LED
+LED mit dem längsten Pin auf die rote +-Linie. Die anderen Pins einfach so ins Steckbrett. Dann verbinden wie auf dem Foto zu sehen.
+
+<img src="600_436423930.jpeg" width="100%">
+
+Dann kann man die LED über den Webserver steuern.
+
+## OpenWeather
 
 Für OpenWeather braucht man eine Library:
 
@@ -267,7 +285,7 @@ Dann kann man das Script <code>./openweather/openweather.ino</code> öffnen und 
 
 
 
-Um den Arudino mit dem ESP zu verbinden, muss man, um von 5V auf 3V zu kommen, einen Level-Shifter aus zwei Widerständen bauen.
+Um den Arduino mit dem ESP zu verbinden, muss man, um von 5V auf 3V zu kommen, einen Level-Shifter aus zwei Widerständen bauen.
 
 * Arduino TX -> R 470 OHM -> hier nehmen -> R 911 OHM -> GND
 
