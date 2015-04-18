@@ -22,17 +22,15 @@ Ansonsten brauchst Du Deinem Betriebssystem entsprechend noch folgende Software:
 
 ## Dose bauen
 
-<img src="http://photos1.meetupstatic.com/photos/event/9/4/d/b/highres_436418107.jpeg" width="90%">
+<img src="highres_436418107.jpeg" width="90%">
 
-<img src="http://photos3.meetupstatic.com/photos/event/9/9/9/9/highres_436419321.jpeg" width="100%">
+<img src="highres_436419321.jpeg" width="100%">
 
-<img src="http://photos2.meetupstatic.com/photos/event/9/9/9/2/highres_436419314.jpeg" width="100%">
-
-
+<img src="highres_436419314.jpeg" width="100%">
 
 
 ## ESP-Bausatz
-<img src="http://photos2.meetupstatic.com/photos/event/9/4/c/3/highres_436418083.jpeg" width="90%">
+<img src="highres_436418083.jpeg" width="90%">
 
 
 ### Pinout
@@ -78,7 +76,7 @@ Dann kommt die Ausgabe:
 	
 	Can't autodetect firmware, because proper answer not received.
 	
-<img src="http://photos3.meetupstatic.com/photos/event/9/d/9/0/highres_436420336.jpeg" width="90%">
+<img src="highres_436420336.jpeg" width="90%">
 
 
 ## Firmware flashen
@@ -109,4 +107,14 @@ Dann kann man flashen:
 	Leaving...
 
 
-ölskdfj
+Mit der neuen Firmware musste ich die Baud-Rate ändern auf 115200:
+
+	AT-based firmware detected.
+	AT+GMR	
+	00200.9.4
+	compiled by Markus for ESP8266 workshop @ Apr 15 2015 09:17:02
+	
+	OK
+	
+
+
