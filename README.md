@@ -88,7 +88,7 @@ Außerdem braucht man die ESPTools: https://github.com/themadinventor/esptool.gi
 	$ sudo python setup.py install
 	$ python esptool.py
 	
-Das Modul in de Flash-Zustand versetzen:
+Das Modul in den Flash-Zustand versetzen:
 
 * Reset gedrückt halten
 * Programmierbutton gedrückt halten
