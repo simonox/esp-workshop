@@ -226,23 +226,46 @@ Man kann die Mac-Adresse holen:
 	
 	OK
 
-## Arduino
+## NodeMCU
+### Vorbereitung
 
-Jetzt kann man den Arduino programmieren.
-
-Dazu wird eine neue Firmware aufgespielt:
+Für NodeMCU wird eine neue Firmware benötigt. Diese Firmware kommuniziert mit dem Controller. Dazu wird die neue Firmware "NodeMCU firmware" aufgespielt:
 
 	$ python esptool.py --port /dev/cu.wchusbserial1420 write_flash 0x000000 ../esp-workshop/nodemcu_latest.bin
 	Connecting...
 	Erasing flash...
+	Writing at 0x00062000... (100 %)
 	
+	Leaving...
 
-Dann braucht man eine Library:
+
+Man kann sich dann wieder über ESPlorer verbinden. Es gibt eine neue Firmware.
+
+	PORT OPEN 9600
+	
+	Communication with MCU...
+	Got answer! AutoDetect firmware...
+	
+	NodeMCU firmware detected.
+	=node.heap()
+	19992
+	
+Jetzt kann man nicht nur über AT-Befehle mit dem ESP sprechen.
+
+	=wifi.sta.getip()
+	192.168.0.78	255.255.254.0	192.168.0.1<img src="600_436423045.jpeg" width="100%">### LuraJetzt kann man mit LUA programmieren. Es gibt zwei Beispiele:
+* init.lua		
+* webap_toggle_pin.lua## OpenWeather
+
+Für OpenWeather braucht man eine Library:
 
 * Öffne die IDE und klicke im "Sketch" Menü Include Library > Manage Libraries
 * Füge die ZIP-Datei <code>./openweather/libraries/ArduinoJson.zip</code> hinzu.
 
-Dann kann man das Script <code>./openweather/openweather.ino</code> öffnen und auf den Arduino spielen.
+Dann kann man das Script <code>./openweather/openweather.ino</code> öffnen und auf den Arduino spielen. **Da in diesem Script Passworte stehen, liegt es nicht in diesem Repo! :-(**
+
+
+
 
 Um den Arudino mit dem ESP zu verbinden, muss man, um von 5V auf 3V zu kommen, einen Level-Shifter aus zwei Widerständen bauen.
 
@@ -252,4 +275,4 @@ Um den Arudino mit dem ESP zu verbinden, muss man, um von 5V auf 3V zu kommen, e
 * Arduino RX -> ESP TX
 
 
-
+To be continued... maybe.
