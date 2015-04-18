@@ -1,6 +1,10 @@
 # ESP Workshop
 
-## Links
+Das sind meine Aufzeichnungen zu diesem Workshop: https://wiki.attraktor.org/Termin:ESP8266_Workshop 
+
+Das ganze findet man auch auf Meetup (dort kommen die Fotos her): http://www.meetup.com/attraktor/events/221482638/
+
+## Vorbereitung
 
 Wenn Du mit der neuen ESP8266/ Arduino-IDE programmieren möchtest (daraus kann man das ESP8266-Modul über die Arduino IDE direkt programmieren), wäre es sinnvoll, wenn Du Dir (am besten kurz vor dem Workshop) eine aktuelle Version vom github herunterlädst: 
 
@@ -9,7 +13,7 @@ Wenn Du mit der neuen ESP8266/ Arduino-IDE programmieren möchtest (daraus kann 
 
 Ansonsten brauchst Du Deinem Betriebssystem entsprechend noch folgende Software:
 
-* Esplorer: http://esp8266.ru/esplorer/#download
+* ESPlorer: http://esp8266.ru/esplorer/#download
 
 * NodeMCU-Flasher: https://github.com/nodemcu/nodemcu-flasher (nur Windows) alternativ esptool.py: https://github.com/themadinventor/esptool/
 
@@ -20,22 +24,25 @@ Ansonsten brauchst Du Deinem Betriebssystem entsprechend noch folgende Software:
 
 <img src="http://photos1.meetupstatic.com/photos/event/9/4/d/b/highres_436418107.jpeg" width="90%">
 
-<img src="http://photos2.meetupstatic.com/photos/event/9/9/9/2/highres_436419314.jpeg" width="100%">
-
 <img src="http://photos3.meetupstatic.com/photos/event/9/9/9/9/highres_436419321.jpeg" width="100%">
 
+<img src="http://photos2.meetupstatic.com/photos/event/9/9/9/2/highres_436419314.jpeg" width="100%">
 
 
-### Bausatz
+
+
+## ESP-Bausatz
 <img src="http://photos2.meetupstatic.com/photos/event/9/4/c/3/highres_436418083.jpeg" width="90%">
 
 
 ### Pinout
+
 ![Pinout](http://s17.postimg.org/jmku0rklb/pin_map.png)
 
 ## Inbetriebnahme
 
-* ESP-07 auf Steckbrett
+Im ESP-Bausatz war ein ESP-07 auf einem Steckbrett.
+
 <img src="https://wiki.attraktor.org/images/b/ba/Board_ESP8266.jpg" width="90%">
 
 ### OS X Yosemite Treiber
@@ -51,7 +58,7 @@ Reboot
 
 Dann sollte es ein neues Gerät geben:
 
-	ls /dev/cu.*
+	$ ls /dev/cu.*
 	/dev/cu.wchusbserial1420
 
 Dann läuft auch ein PL2303 USB UART Adapter TTL-Pegel 3.3V / 5V mit dem Raspberry Pi.
@@ -74,3 +81,32 @@ Dann kommt die Ausgabe:
 <img src="http://photos3.meetupstatic.com/photos/event/9/d/9/0/highres_436420336.jpeg" width="90%">
 
 
+## Firmware flashen
+
+Auf \\\\Tesor (im Attraktor) liegt eine Datei <code>worshop_AT.bin</code> (auch hier in diesem Verzeichnis).
+
+Außerdem braucht man die ESPTools: https://github.com/themadinventor/esptool.git
+
+	$ sudo python setup.py install
+	$ python esptool.py
+	
+Das Modul in de Flash-Zustand versetzen:
+
+* Reset gedrückt halten
+* Programmierbutton gedrückt halten
+* Reset loslassen
+* Programmierbutton loslassen
+	
+Dann kann man flashen:
+
+	$ python esptool.py --port /dev/cu.wchusbserial1420 --baud 9600 write_flash 0x000000 ../esp-workshop/workshop_AT.bin
+	
+	Connecting...
+	Erasing flash...
+	.....
+	Writing at 0x00066400... (100 %)
+	
+	Leaving...
+
+
+ölskdfj
