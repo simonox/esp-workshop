@@ -255,14 +255,14 @@ Jetzt kann man nicht nur über AT-Befehle mit dem ESP sprechen.
 	=wifi.sta.getip()
 	192.168.0.78	255.255.254.0	192.168.0.1<img src="600_436423045.jpeg" width="100%">### LuraJetzt kann man mit LUA programmieren. Es gibt zwei Beispiele:
 * init.lua		
-* webap_toggle_pin.lua## OpenWeather
+* webap\_toggle\_pin.lua## OpenWeather
 
 Für OpenWeather braucht man eine Library:
 
 * Öffne die IDE und klicke im "Sketch" Menü Include Library > Manage Libraries
-* Füge die ZIP-Datei <code>./openweather/libraries/ArduinoJson.zip</code> hinzu.
+* Füge die ZIP-Datei <code>./libraries/ArduinoJson.zip</code> hinzu.
 
-Dann kann man das Script <code>./openweather/openweather.ino</code> öffnen und auf den Arduino spielen. **Da in diesem Script Passworte stehen, liegt es nicht in diesem Repo! :-(**
+Dann kann man das Script <code>./openweather/openweather.ino</code> öffnen und auf den Arduino spielen. **Da in diesem Script Passworte stehen, liegt es nicht in diesem Repo!**
 
 
 
