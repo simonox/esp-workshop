@@ -133,7 +133,63 @@ Fine.
 
 Über ESPlorer kann man AT-Kommandos absetzen. 
 
-Z.B. kann man einen Access-Point "AI-THINKER-OX" ohne Verschlüsselung aufmachen.
+	AT	
+	OK
+	
+
+	AT+RST	
+	
+	OK
+	
+	 ets Jan  8 2013,rst cause:4, boot mode:(3,7)
+	
+	wdt reset
+	load 0x40100000, len 25628, room 16 
+	tail 12
+	chksum 0x72
+	ho 0 tail 12 room 4
+	load 0x3ffe8000, len 3476, room 12 
+	tail 8
+	chksum 0xea
+	load 0x3ffe8da0, len 6716, room 0 
+	tail 12
+	chksum 0x58
+	csum 0x58
+	sd
+	ready
+
+Man kann die Liste aller Access-Points einsehen:
+
+	AT+CWLAP
+
+	+CWLAP:(0,"ESP_9B63EE",-59,"1a:fe:34:9b:63:ee",1)
+	+CWLAP:(0,"AI-THINKER_9C0944",-54,"1a:fe:34:9c:09:44",1)
+	+CWLAP:(0,"ESP_9B55C7",-33,"1a:fe:34:9b:55:c7",1)
+	+CWLAP:(0,"AI-THINKER_9C089A",-54,"1a:fe:34:9c:08:9a",1)
+	+CWLAP:(2,"testJakob",-65,"1a:fe:34:a0:a7:98",1)
+	+CWLAP:(0,"AI-THINKER_9FDFBB",-72,"1a:fe:34:9f:df:bb",1)
+	+CWLAP:(3,"Attraktor",-61,"0e:27:22:53:1e:f8",1)
+	+CWLAP:(0,"AI-THINKER_9FDFD4",-66,"1a:fe:34:9f:df:d4",1)
+	+CWLAP:(0,"hamburg.freifunk.net",-49,"fa:1c:68:ca:85:6a",1)
+	+CWLAP:(0,"f8:d1:11:87:52:2e",-49,"fa:1d:68:ca:85:6a",1)
+	+CWLAP:(4,"1.OG",-90,"0a:18:d6:4f:19:5b",1)
+	+CWLAP:(0,"Hackerspace-Bremen",-46,"1a:fe:34:9c:09:9b",3)
+	+CWLAP:(4,"1.OG",-72,"0a:18:d6:8d:cb:5c",6)
+	+CWLAP:(4,"1.OG Gaeste",-81,"04:18:d6:8d:cb:5c",6)
+	+CWLAP:(3,"Attraktor",-82,"24:a4:3c:17:c1:c2",6)
+	+CWLAP:(3,"ADT GMBH 2",-91,"cc:b2:55:8c:3a:c0",6)
+	+CWLAP:(3,"EZ-7330-SRV",-85,"34:31:c4:c6:b2:dc",8)
+	+CWLAP:(3,"",-92,"c6:25:06:7c:52:1a",8)
+	+CWLAP:(3,"E4-Root",-72,"00:1c:28:d8:21:df",10)
+	+CWLAP:(3,"WLAN-239887",-71,"88:03:55:23:98:1d",11)
+	+CWLAP:(3,"Attraktor",-40,"dc:9f:db:b5:3a:a2",11)
+	+CWLAP:(4,"FRITZ!Box 6360 Cable",-85,"9c:c7:a6:a4:dd:dc",11)
+	+CWLAP:(4,"Astra GmbH",-75,"00:1a:4f:1b:fe:b9",11)
+
+	OK
+
+
+Man kann einen Access-Point "AI-THINKER-OX" ohne Verschlüsselung aufmachen.
 
 
 	AT+CWSAP="AI-THINKER-OX","",5,0Mit diesem Netzwerk kann ich mich verbinden. Offene Ports gibt es auf dem ESP scheinbar keine.
@@ -156,7 +212,44 @@ Z.B. kann man einen Access-Point "AI-THINKER-OX" ohne Verschlüsselung aufmachen
 	Read data files from: /usr/local/bin/../share/nmap
 	Nmap done: 1 IP address (1 host up) scanned in 14.64 seconds
 
-Allerdings funktioniert die Dosenantenne :-)
+Allerdings funktioniert die Dosenantenne (getestet mit iStumbler) :-)
+
+Man kann den ESP auch in ein Netzwerk hängen:
+
+	AT+CWJAP="Attraktor","super*geheimes*passwort"
+	OK
+
+Man kann die Mac-Adresse holen:
+
+	AT+CIPAPMAC?
+	+CIPAPMAC:"1a:fe:34:9c:08:86"
+	
+	OK
+
+## Arduino
+
+Jetzt kann man den Arduino programmieren.
+
+Dazu wird eine neue Firmware aufgespielt:
+
+	$ python esptool.py --port /dev/cu.wchusbserial1420 write_flash 0x000000 ../esp-workshop/nodemcu_latest.bin
+	Connecting...
+	Erasing flash...
+	
+
+Dann braucht man eine Library:
+
+* Öffne die IDE und klicke im "Sketch" Menü Include Library > Manage Libraries
+* Füge die ZIP-Datei <code>./openweather/libraries/ArduinoJson.zip</code> hinzu.
+
+Dann kann man das Script <code>./openweather/openweather.ino</code> öffnen und auf den Arduino spielen.
+
+Um den Arudino mit dem ESP zu verbinden, muss man, um von 5V auf 3V zu kommen, einen Level-Shifter aus zwei Widerständen bauen.
+
+* Arduino TX -> R 470 OHM -> hier nehmen -> R 911 OHM -> GND
+
+* Arduino TX -> ESP RX
+* Arduino RX -> ESP TX
 
 
 
