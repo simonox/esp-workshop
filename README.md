@@ -131,7 +131,32 @@ Fine.
 
 ### Access-Point aufmachen
 
-Über ESPlorer kann man AT-Kommandos absetzen. Z.B. kann man einen Access-Point "AI-THINKER-OX" ohne Verschlüsselung aufmachen.
+Über ESPlorer kann man AT-Kommandos absetzen. 
+
+Z.B. kann man einen Access-Point "AI-THINKER-OX" ohne Verschlüsselung aufmachen.
 
 
-	AT+CWSAP="AI-THINKER-OX","",5,0
+	AT+CWSAP="AI-THINKER-OX","",5,0Mit diesem Netzwerk kann ich mich verbinden. Offene Ports gibt es auf dem ESP scheinbar keine.
+
+	$ nmap -v 192.168.4.1
+	
+	Starting Nmap 6.47 ( http://nmap.org ) at 2015-04-18 17:31 CEST
+	Initiating Ping Scan at 17:31
+	Scanning 192.168.4.1 [2 ports]
+	Completed Ping Scan at 17:31, 0.00s elapsed (1 total hosts)
+	Initiating Parallel DNS resolution of 1 host. at 17:31
+	Completed Parallel DNS resolution of 1 host. at 17:31, 13.00s elapsed
+	Initiating Connect Scan at 17:31
+	Scanning 192.168.4.1 [1000 ports]
+	Completed Connect Scan at 17:31, 1.60s elapsed (1000 total ports)
+	Nmap scan report for 192.168.4.1
+	Host is up (0.0086s latency).
+	All 1000 scanned ports on 192.168.4.1 are closed
+	
+	Read data files from: /usr/local/bin/../share/nmap
+	Nmap done: 1 IP address (1 host up) scanned in 14.64 seconds
+
+Allerdings funktioniert die Dosenantenne :-)
+
+
+
