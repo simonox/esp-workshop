@@ -1,8 +1,13 @@
 # ESP Workshop
 
-Das sind meine Aufzeichnungen zu diesem Workshop: https://wiki.attraktor.org/Termin:ESP8266_Workshop 
+Das sind meine Aufzeichnungen zu diesem Workshop am Apr 15 2015 im Attraktor eV: https://wiki.attraktor.org/Termin:ESP8266_Workshop 
 
-Das ganze findet man auch auf Meetup (dort kommen die Fotos her): http://www.meetup.com/attraktor/events/221482638/
+Das ganze findet man auch auf Meetup (dort kommen die Fotos her): http://www.meetup.com/attraktor/events/221482638/ 
+
+
+
+Das Etherpad dazu ist hier: https://pad.attraktor.org/p/ESP8266
+
 
 ## Vorbereitung
 
@@ -20,7 +25,9 @@ Ansonsten brauchst Du Deinem Betriebssystem entsprechend noch folgende Software:
 * NodeMCU-Firmware: https://github.com/nodemcu/nodemcu-firmware
 
 
-## Dose bauen
+## Dosenantenne bauen
+
+Hier die Bilder:
 
 <img src="highres_436418107.jpeg" width="90%">
 
@@ -37,7 +44,7 @@ Ansonsten brauchst Du Deinem Betriebssystem entsprechend noch folgende Software:
 
 ![Pinout](http://s17.postimg.org/jmku0rklb/pin_map.png)
 
-## Inbetriebnahme
+### ESP-07
 
 Im ESP-Bausatz war ein ESP-07 auf einem Steckbrett.
 
@@ -59,9 +66,12 @@ Dann sollte es ein neues Gerät geben:
 	$ ls /dev/cu.*
 	/dev/cu.wchusbserial1420
 
-Dann läuft auch ein PL2303 USB UART Adapter TTL-Pegel 3.3V / 5V mit dem Raspberry Pi.
+Anmerkung: Dann läuft auch ein PL2303 USB UART Adapter TTL-Pegel 3.3V / 5V mit dem Raspberry Pi.
 
 ## ESPlorer
+Das Modul schließt man über Micro-USB an.
+
+<img src="600_436421150.jpeg" width="90%" >
 
 Nun kann man sich mit dem ESPlorer verbinden.
 * /dev/cu.wchusbserial1420
@@ -106,8 +116,9 @@ Dann kann man flashen:
 	
 	Leaving...
 
+Anmerkung: Theoretisch kann man die Baud-Rate auch weglassen.
 
-Mit der neuen Firmware musste ich die Baud-Rate ändern auf 115200:
+Jetzt kommt man im ESPlorer wieder auf das Modul. Mit der neuen Firmware musste ich die Baud-Rate ändern auf 115200:
 
 	AT-based firmware detected.
 	AT+GMR	
@@ -116,5 +127,6 @@ Mit der neuen Firmware musste ich die Baud-Rate ändern auf 115200:
 	
 	OK
 	
+Fine.
 
 
