@@ -129,4 +129,9 @@ Jetzt kommt man im ESPlorer wieder auf das Modul. Mit der neuen Firmware musste 
 	
 Fine.
 
+### Access-Point aufmachen
 
+Über ESPlorer kann man AT-Kommandos absetzen. Z.B. kann man einen Access-Point "AI-THINKER-OX" ohne Verschlüsselung aufmachen.
+
+
+	AT+CWSAP="AI-THINKER-OX","",5,0
