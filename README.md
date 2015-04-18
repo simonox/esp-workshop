@@ -280,24 +280,17 @@ Das ganze läuft dann natürlich auch autark.
 
 <img src="600_436424180.jpeg" width="100%">
 
-## OpenWeather
+## Arduino LED
 
-Für OpenWeather braucht man eine Library:
+Man muss eine eigene Arduino IDE verwenden. 
 
-* Öffne die IDE und klicke im "Sketch" Menü Include Library > Manage Libraries
-* Füge die ZIP-Datei <code>./libraries/ArduinoJson.zip</code> hinzu.
+Die gibt es hier: https://github.com/esp8266/Arduino (nicht die Sourcen klonen sondern die Binaries runterladen).
 
-Dann kann man das Script <code>./openweather/openweather.ino</code> öffnen und auf den Arduino spielen. **Da in diesem Script Passworte stehen, liegt es nicht in diesem Repo!**
+Diese muss man konfigurieren. 
 
+* Werkzeuge -> Platine -> ESP
+* COM-Port
+* Programmer: ESP-Tool
 
+Leider funktioniert das bei mir (noch) nicht.
 
-
-Um den Arduino mit dem ESP zu verbinden, muss man, um von 5V auf 3V zu kommen, einen Level-Shifter aus zwei Widerständen bauen.
-
-* Arduino TX -> R 470 OHM -> hier nehmen -> R 911 OHM -> GND
-
-* Arduino TX -> ESP RX
-* Arduino RX -> ESP TX
-
-
-To be continued... maybe.
