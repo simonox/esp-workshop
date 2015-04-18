@@ -53,7 +53,7 @@ Im ESP-Bausatz ist ein ESP-07 auf einem Steckbrett.
 
 ### OS X Yosemite Treiber
 
-Installiere Treiber von hier:  http://www.wch.cn/downloads.php?name=pro&proid=5
+Die Treiber für den ESP gibt es hier:  http://www.wch.cn/downloads.php?name=pro&proid=5
 
 Installiere den CH340-Treiber.
 
