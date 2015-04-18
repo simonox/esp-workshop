@@ -271,6 +271,7 @@ Auf die kann man sich mit einem Webbrowser connecten: http://192.168.0.78/
 <img src="highres_436423567.jpeg" width="100%">
 
 ### LED
+
 LED mit dem längsten Pin auf die rote +-Linie. Die anderen Pins (stehen für Red, Green, Blue) einfach so ins Steckbrett. Dann verbinden wie auf dem Foto zu sehen.
 
 <img src="600_436423930.jpeg" width="100%">
@@ -283,7 +284,7 @@ Das ganze läuft dann natürlich auch autark.
 
 ## Arduino LED
 
-Man muss eine eigene Arduino IDE verwenden. 
+Wem Lua und der ESPlorer zu sperrig sind, der kann auch die Arduino-IDE verwenden und den ESP wie einen Arduino programmieren. Man sollte dazu eine eigene Arduino IDE verwenden, die bereits die benötigten Libraries etc. mitbringt. 
 
 Die gibt es hier: https://github.com/esp8266/Arduino (nicht die Sourcen klonen sondern die Binaries runterladen).
 
