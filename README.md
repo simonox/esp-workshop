@@ -298,6 +298,7 @@ Diese muss man konfigurieren.
 Leider funktioniert das bei mir (noch) nicht.
 
 ## Links
-* ESP8266 Web Server Tutorial: http://randomnerdtutorials.com/esp8266-web-server/
+* 7 Weekend Projects/Tutorials For the ESP8266 WiFi Module: http://randomnerdtutorials.com/7-weekend-projectstutorials-for-the-esp8266-wifi-module/
+* ESP8266 Web Server Tutorial (s.o.!): http://randomnerdtutorials.com/esp8266-web-server/
 * Installing and Building an Arduino Sketch for the $5 ESP8266 Microcontroller: http://makezine.com/2015/04/01/installing-building-arduino-sketch-5-microcontroller/
 
