@@ -231,7 +231,7 @@ Man kann die Mac-Adresse holen:
 
 ## NodeMCU
 
-### Vorbereitung
+### Firmware flashen
 
 Für NodeMCU wird eine neue Firmware benötigt. Diese Firmware kommuniziert mit dem Controller. Dazu wird die neue Firmware "NodeMCU firmware" aufgespielt:
 
@@ -241,7 +241,8 @@ Für NodeMCU wird eine neue Firmware benötigt. Diese Firmware kommuniziert mit 
 	Writing at 0x00062000... (100 %)
 	
 	Leaving...
-
+	
+### ESPlorer
 
 Man kann sich dann wieder über ESPlorer verbinden. Es gibt eine neue Firmware.
 
@@ -282,7 +283,7 @@ Das ganze läuft dann natürlich auch autark.
 
 <img src="600_436424180.jpeg" width="100%">
 
-## Arduino LED
+### Arduino LED
 
 Wem Lua und der ESPlorer zu sperrig sind, der kann auch die Arduino-IDE verwenden und den ESP wie einen Arduino programmieren. Man sollte dazu eine eigene Arduino IDE verwenden, die bereits die benötigten Libraries etc. mitbringt. 
 
@@ -295,4 +296,8 @@ Diese muss man konfigurieren.
 * Programmer: ESP-Tool
 
 Leider funktioniert das bei mir (noch) nicht.
+
+## Links
+* ESP8266 Web Server Tutorial: http://randomnerdtutorials.com/esp8266-web-server/
+* Installing and Building an Arduino Sketch for the $5 ESP8266 Microcontroller: http://makezine.com/2015/04/01/installing-building-arduino-sketch-5-microcontroller/
 
